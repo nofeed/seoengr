@@ -1,0 +1,49 @@
+---
+---
+
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento&family=Questrial&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+h1, h2, h3, h4, h5 {
+  @apply font-serif;
+}
+
+body {
+  @apply font-sans-serif;
+}
+
+p {
+  @apply my-4;
+}
+
+a {
+  @apply underline text-blue-600;
+}
+
+a:hover {
+  @apply bg-yellow-100;
+}
+
+a:visited {
+  @apply text-blue-800;
+}
+
+a:visited:hover {
+  @apply bg-orange-100;
+}
+
+nav ul li {
+  @apply pl-4;
+}
+
+nav ul li:hover {
+  @apply bg-blue-100;
+}
+
+article h2 {
+  @apply text-3xl font-bold text-red-600; 
+}

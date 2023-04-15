@@ -1,0 +1,39 @@
+---
+layout: default
+title: "SEOEngineering"
+---
+<main>
+  <div id="introduction" class="mx-10 py-1 border-x-4 border-green-600 text-xl">
+    <p class="mx-6">I was very bored on my vacation in Spain, so I started reading a book on SEO. As usual, I thought
+      the subject was <strong>interesting and inspiring</strong>, something I should know more about.</p>
+    <p class="mx-6">I've read a few books and several articles about it in the years, always being interested in search
+      engines (or, to put it mildly, "do cool things with huge amounts of data"), but as Confucio once said,
+      <cite>"knowledge without practice is useless"</cite>, as a software developer working primarily on 
+      the web I never really took action and always felt something was lacking.</p>
+    <p class="mx-6">Here we go then, my journey into SEO starts here, writing about my discoveries, experiments, and 
+      mistakes, hopefully with the help of a few friends.</p>
+    <p class="mx-6">My name is 
+      <a href="https://nofeed.org" alt="Nicholas Wieland's personal website" class="underline">
+        Nicholas Wieland, I'm a software engineer working mainly in Ruby (but not only)
+      </a>, 
+      and I'd like to play with search engines.</p>
+  </div>
+
+
+  <div id="blog" class="mx-12 my-10">
+    <h2 class="text-4xl font-bold text-red-600">Articles:</h2>
+
+    <nav>
+      <ul class="mx-4 my-10">
+        {% for post in site.posts %}
+          <li>
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_long_string: "ordinal", "UK" }}</time>
+            <br />
+            <a href="{{ post.url }}" class="text-xl">{{ post.title }}</a>
+            <p>{{ post.description }}</p>
+          </li>
+        {% endfor %}  
+      </ul>
+    </nav>
+  </div>
+</main>

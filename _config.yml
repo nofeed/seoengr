@@ -2,8 +2,21 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
 title: "" # the name of your site, e.g. ACME Corp.
 
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter_opts:
+    default_lang: html
+    css_class   : 'syntax'
+
 plugins:
   - jekyll-postcss
+  - jekyll-validator
 
 postcss:
   cache: false
+
+validator:
+  exclude: 
+    - 'assets/css/main.css'

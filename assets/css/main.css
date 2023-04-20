@@ -7,7 +7,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 h1, h2, h3, h4, h5 {
   @apply font-serif;
 }
@@ -20,20 +19,20 @@ p {
   @apply my-4;
 }
 
-a {
-  @apply underline text-blue-600;
+main a, footer a {
+  @apply underline text-blue-500;
 }
 
-a:hover {
+main a:hover, footer a:hover {
   @apply bg-yellow-100;
 }
 
-a:visited {
-  @apply text-blue-800;
+main a:visited, footer a:visiter {
+  @apply text-blue-900;
 }
 
-a:visited:hover {
-  @apply bg-orange-100;
+main a:visited:hover, footer a:visited:hover {
+  @apply bg-orange-300;
 }
 
 nav ul li {
@@ -45,5 +44,25 @@ nav ul li:hover {
 }
 
 article h2 {
-  @apply text-3xl font-bold text-red-600; 
+  @apply text-3xl my-8 font-bold text-red-600; 
+}
+
+article h3 {
+  @apply text-2xl my-8 font-bold text-green-600;
+}
+
+article p {
+  @apply mx-10;
+}
+
+article cite {
+  @apply font-serif mx-6 text-zinc-400 italic;
+}
+
+.highlight {
+  @apply my-6 mx-10 text-sm md:text-base lg:text-lg lg:m-10;
+}
+
+.highlight pre {
+  @apply overflow-x-auto;
 }

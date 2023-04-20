@@ -6,27 +6,34 @@
     <title>{{ page.title }} - {{ site.title }}</title>
     <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
     <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/rouge.css">
     <script src="https://kit.fontawesome.com/5c9d4f6117.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
-    <header class="m-10 text-sky-700">
-      <div class="font-serif font-extrabold text-4xl sm:text-6xl" alt="SEOCoder logo">
+    <header class="m-10">
+      {% if page.url == "/" %}
+      <h1 class="text-sky-700 font-serif font-extrabold text-4xl md:text-6xl">
         <i class="fa-solid fa-link"></i>
         SEOEngineering
+      </h1>
+      {% else %}
+      <div class="text-sky-700 font-serif font-extrabold text-4xl md:text-6xl">
+        <a href="/" title="SEOEngineering homepage">
+          <i class="fa-solid fa-link"></i>
+          SEOEngineering
+        </a>
       </div>
+      {% endif %}
     </header>
 
     {{ content }}
 
     <footer class="mt-20 text-center">
       <p><i class="fa-regular fa-copyright"></i> Nicholas Wieland. Some rights reserved.</p>
-      <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
-        <span property="dct:title">SEOCoder</span> is licensed under 
-        <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">
-          Attribution 4.0 International
-        </a>
-      </p> 
+      <p>
+        This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+      </p>
     </footer>
   </body>
 </html>

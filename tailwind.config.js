@@ -16,5 +16,8 @@ module.exports = {
       },
     },
   },
+  purge: [
+    './**/*.html'
+  ],
   plugins: []
 }

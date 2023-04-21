@@ -11,7 +11,6 @@ kramdown:
     css_class   : 'syntax'
 
 plugins:
-  - jekyll-postcss
   - jekyll-validator
 
 postcss:

@@ -7,4 +7,5 @@ gem "rouge", "~> 4.1"
 group :jekyll_plugins do
   gem 'jekyll-postcss-v2'
   gem 'jekyll-validator'
+  gem 'jekyll-seo-tag'
 end

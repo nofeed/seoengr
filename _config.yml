@@ -1,6 +1,10 @@
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: "" # the subpath of your site, e.g. /blog
-title: "" # the name of your site, e.g. ACME Corp.
+url: "https://seoengr.net" # the base hostname & protocol for your site, e.g. http://example.com
+title: "SEOEngineering" # the name of your site, e.g. ACME Corp.
+description: "Technical SEO blog, if you like code and search engines you belong here."
+twitter:
+  username: "seoengr"
+  card: "summary"
+logo: /assets/images/site_wide_logo.png
 
 markdown: kramdown
 highlighter: rouge

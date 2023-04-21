@@ -2,7 +2,7 @@
 title: Automating HTML Validation for a Happier Life
 description: HTML validation should be a key part of any publishing platform, that can and should be automated programmatically.
 layout: post
-date: 2020-04-20
+date: 2023-04-20
 image: /assets/images/w3cs.png
 ---
 HTML validation is a check you perform on an HTML document to see if it adheres to the [W3C standard](https://html.spec.whatwg.org/multipage/ "W3C HTML Spec").

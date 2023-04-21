@@ -8,4 +8,5 @@ group :jekyll_plugins do
   gem 'jekyll-postcss-v2'
   gem 'jekyll-validator'
   gem 'jekyll-seo-tag'
+  gem 'jekyll-sitemap'
 end

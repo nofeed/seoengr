@@ -3,6 +3,7 @@ title: Automating HTML Validation for a Happier Life
 description: HTML validation should be a key part of any publishing platform, that can and should be automated programmatically.
 layout: post
 date: 2023-04-20
+last_modified_at: 2023-04-24
 image: /assets/images/w3cs.png
 ---
 HTML validation is a check you perform on an HTML document to see if it adheres to the [standard](https://html.spec.whatwg.org/multipage/ "HTML Spec").
@@ -20,9 +21,9 @@ The key benefit is future-proofing your documents. Even if the standard is updat
 
 If you test on every browser on earth, good for you: I applaud your dedication and professionality. I [doubt](http://links.twibright.com/ "Links browser"){:rel="nofollow"} [every](https://apps.kde.org/en-gb/konqueror/ "Konqueror browser"){:rel="nofollow"} [browser](https://www.browzar.com/ "Browzar browser"){:rel="nofollow"} [though](https://www.fenrir-inc.com/jp/sleipnir/ "Sleipnir browser"){:rel="nofollow"}, really. But I understand, you test on Google Chrome, Firefox, Microsoft Edge and Apple Safari, you definitely should be in a good place. Starting with a valid HTML and CSS stylesheet though can greatly reduce testing and debugging costs. It establishes a common standard and incorporates best practices from the past 30 years.
 
-I also must say, it's professional. HTML is a rather straightforward markup language, with just a bunch of words whose meaning is very straightforward to interpret semantically. It's not 1998 anymore and all browsers have been very good at interpreting it for a long time. If your HTML isn't valid, I think you're lazy, and probably shouldn't be writing HTML in the first place.
+I also must say, it's professional. HTML is a rather straightforward markup language, with just a bunch of words whose meaning is very uncomplicated to interpret semantically. It's not 1998 anymore and all browsers have been very good at interpreting it for a long time. If your HTML isn't valid, I think you're lazy, and probably shouldn't be writing HTML in the first place.
 
-## Does it help with ranking?
+## Does it help with SEO and ranking?
 
 In 2017, [John Mueller](https://io.google/2022/speakers/john-mueller/ "John Mueller bio") has been asked if W3C validation was relevant for the algorithm. [The answer was very succinct and clear](https://twitter.com/JohnMu/status/858990753909022720){:rel='nofollow'}:
 
@@ -75,7 +76,7 @@ Let's start by crafting some simple, invalid HTML, and save it in a **'test.html
 </html>
 ```
 
-There are a few mistakes: first an invalid `<noscript>` tag in the head, [which could break hreflang](https://www.seroundtable.com/google-head-section-break-hreflang-unrecognizable-22340.html "Breaking Head Section Can Make Hreflang Unrecognizable To Google"); then a forgotten `"` leaves an `<a>` tag open.
+There are a few errors: first an invalid `<noscript>` tag in the head, [which could break hreflang](https://www.seroundtable.com/google-head-section-break-hreflang-unrecognizable-22340.html "Breaking Head Section Can Make Hreflang Unrecognizable To Google"); then a forgotten `"` leaves an `<a>` tag open.
 Let's try this out using the magnificent [curl](https://curl.se/ 'Curl'){:rel="nofollow"}:
 
 ```bash
@@ -139,16 +140,16 @@ for i in "$1"/*.html; do
 done
 ```
 
-We trap the output in a variable, and check if it's empty or has any content. [In case it's empty we exit with 0, in case it has something inside we exit with 1](https://tldp.org/LDP/abs/html/exit-status.html "Bash exit statuses"). Another improvement is that we can direct the script to a specific directory. For example:
+We trap the output in a variable, and check if it's empty or has any content. [In case it's empty we exit with 0, in case it has something inside we exit with 1](https://tldp.org/LDP/abs/html/exit-status.html "Bash exit statuses"){:rel="nofollow"}. Another improvement is that we can direct the script to a specific directory. For example:
 
 ```bash
 $~ ./validator.sh ./my_blog/html
 ```
 
-Again, this is very primitive, but possibly "good enough" to get you started and incorporate HTML validation into your development and in your build process. Although the API isn't perfect, it's quite useful. [It outputs JSON](https://github.com/validator/validator/wiki/Output-%C2%BB-JSON "JSON output for the W3C validator") which makes it easy to get validation results and integrate it into the build process using any language you might prefer.
+Again, this is very primitive, but possibly "good enough" to get you started and incorporate HTML validation into your development and in your build process. Although the API isn't perfect, it's quite useful. [It outputs JSON](https://github.com/validator/validator/wiki/Output-%C2%BB-JSON "JSON output for the W3C validator"){:rel="nofollow"} which makes it easy to get validation results and integrate it into the build process using any language you might prefer.
 
-### Bonus ~ eating my own dogfood
+### Bonus ~ eating my own dog food
 
-I really like [Jekyll](https://jekyllrb.com/ "Jekyll site generator"){:rel="nofollow"}, which is my favorite publishing platform and the platform this blog runs on. As an experienced Ruby developer I had to eat my own dog food. I integrated the [w3c_validators gem](https://github.com/w3c-validators/w3c_validators "W3C Validators gem"){:rel="nofollow"} into Jekyll in a plugin to avoid running bash scripts. Now every time the blog is regenerated I validate all my HTML and, surprise, all my CSS.
+I really like [Jekyll](https://jekyllrb.com/ "Jekyll site generator"), which is my favorite publishing platform and the platform this blog runs on. As an experienced Ruby developer I had to eat my own dog food. I integrated the [w3c_validators gem](https://github.com/w3c-validators/w3c_validators "W3C Validators gem"){:rel="nofollow"} into Jekyll in a plugin to avoid running bash scripts. Now every time the blog is regenerated I validate all my HTML and, surprise, all my CSS.
 
-All code is on GitHub in [jekyll-validator](https://github.com/nofeed/jekyll-validator "Jekyll validator gem").
+All code is on GitHub in [jekyll-validator](https://github.com/nofeed/jekyll-validator "jekyll-validator gem").

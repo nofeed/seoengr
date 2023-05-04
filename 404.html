@@ -1,0 +1,35 @@
+---
+layout: default
+title: "404! Not Found."
+regenerate: true
+---
+<main>
+  <div class="mx-10 p-4 border-l-2 border-red-900 md:mx-20 md:p-10 md:border-l-4">
+    <h1 class="text-5xl text-red-900">404! Not Found.</h1>
+
+    <p class="mx-6 text-xl">Unfortunately, we were unable to find the page you requested, and we apologize for any inconvenience. If you believe this was our mistake and want to get in 
+      touch please <a href="mailto:hello@seoengr.net">email us</a>; hopefully we'll be able to help.</p>
+    
+    <p class="mx-14 text-2xl italic bold">
+      <i class="fa-solid fa-person-praying"></i>
+      Thank you very much.
+    </p>
+
+    <p class="mx-6 text-xl">The latest posts on the blog are listed below.</p>
+  </div>
+
+  <div id="blog" class="mx-12 my-6 md:my-10">
+    <nav>
+      <ul class="mx-4 my-10">
+        {% for post in site.posts %}
+          <li>
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_long_string: "ordinal", "UK" }}</time>
+            <br>
+            <a href="{{ post.url }}" class="text-xl">{{ post.title }}</a>
+            <p>{{ post.description }}</p>
+          </li>
+        {% endfor %}  
+      </ul>
+    </nav>
+  </div>
+</main>

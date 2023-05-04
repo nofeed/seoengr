@@ -1,5 +1,6 @@
 url: "https://seoengr.net" # the base hostname & protocol for your site, e.g. http://example.com
-title: "SEOEngineering" # the name of your site, e.g. ACME Corp.
+title: "SEOEngineering"
+tagline: "Technical SEO blog"
 description: "Technical SEO blog, if you like code and search engines you belong here."
 twitter:
   username: "seoengr"

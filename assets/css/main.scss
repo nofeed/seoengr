@@ -63,6 +63,18 @@ article cite {
   @apply font-serif mx-6 text-zinc-400 italic;
 }
 
+article ul {
+  @apply mx-20 px-4 list-disc;
+}
+
+article ul li {
+  @apply py-2;
+}
+
+article img:hover {
+  @apply border-2 border-stone-100;
+}
+
 footer {
   @apply mb-10;
 }

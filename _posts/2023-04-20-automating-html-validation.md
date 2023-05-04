@@ -1,13 +1,12 @@
 ---
 title: Automating HTML Validation for a Happier Life
-description: HTML validation should be a key part of any publishing platform, that can and should be automated programmatically.
+description: HTML validation is an important tool that helps keep websites up to date with the latest standards and technologies. It also helps catch errors in syntax before they become a problem. Automating HTML validation during the build process is a great way to ensure that all pages are valid, and can help reduce debugging time and improve quality of your webpages. By using an API such as the W3C’s, it is easy to integrate validation into any workflow and make sure that all published content meets the highest standards.
 layout: post
 date: 2023-04-20
 last_modified_at: 2023-04-24
 image: /assets/images/w3cs.png
 author:
   twitter: ngw
-  
 ---
 HTML validation is a check you perform on an HTML document to see if it adheres to the [standard](https://html.spec.whatwg.org/multipage/ "HTML Spec").
 When I first started building websites, there were a lot of discussions about web standards and how useful they were: it was a very different time, [with one browser implementation ruling all over the others](https://web.archive.org/web/20011208113836/http://www.thecounter.com/stats/2001/August/browser.php "TheCounter stats for Aug 2001"){:rel='nofollow'} and some very unhealthy development practices so wildly used that forced some of the best to show [the road to enlightenment](http://www.csszengarden.com/ "The CSS Zen Garden"){:rel='nofollow'}.
